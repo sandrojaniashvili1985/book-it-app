@@ -5,13 +5,21 @@ import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./model/db";
 import router from "./routes/index";
+import { access } from "node:fs";
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://book-it-app-six.vercel.app",
+    credentials: true,
+    allowedHeaders: "Content-Type, Authorization",
+    methods: "GET, POST, PUT, DELETE, OPTIONS",
+  })
+);
 app.use(morgan("tiny"));
 
 app.use("/api/hotels/uploads", express.static(__dirname + "\\uploads"));
