@@ -12,7 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors({ origin: "https://book-it-app-six.vercel.app", credentials: true })
+  cors({
+    origin: "*",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
 );
 app.use(morgan("tiny"));
 
