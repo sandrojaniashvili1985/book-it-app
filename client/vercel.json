@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/proxy/:match*",
-      "destination": "https://book-it-app-server.onrender.com/:match*"
-    }
-  ]
-}
