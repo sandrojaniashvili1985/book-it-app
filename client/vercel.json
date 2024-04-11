@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "./main.tsx",
-      "use": "@now/vite"
+      "use": "vite"
     }
   ],
   "routes": [
