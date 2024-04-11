@@ -2,7 +2,7 @@ import Heading from "../components/ui/Heading";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import ItemWithoutThumbnailsDemo from "@/components/ItemThumbnailsDemo";
+import ItemWithoutThumbnailsDemo from "../components/ItemThumbnailsDemo";
 
 const IndexPage = () => {
   const [hotels, setHotels] = useState([]);
