@@ -11,5 +11,30 @@
       "src": "/(.*)",
       "dest": "server.ts"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "@mongo_uri"
+  },
+  "envSecrets": {
+    "mongo_uri": {
+      "from": "mongo_uri"
+    }
+  },
+  "functions": {
+    "api/*": {
+      "runtime": "nodejs12.x",
+      "memory": 1024,
+      "includeFiles": "api/**",
+      "excludeFiles": "api/**/*.test.ts"
+    }
+  },
+  "analytics": {
+    "projectId": "project-id"
+  },
+  "public": true,
+  "regions": [
+    "sfo",
+    "nyc"
+  ],
+  "alias": "my-app"
 }
