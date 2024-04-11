@@ -1,14 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "./main.tsx",
-      "use": "vite"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
