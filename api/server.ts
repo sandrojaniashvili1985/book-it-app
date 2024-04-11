@@ -5,7 +5,6 @@ import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./model/db";
 import router from "./routes/index";
-import { access } from "node:fs";
 
 const app = express();
 
