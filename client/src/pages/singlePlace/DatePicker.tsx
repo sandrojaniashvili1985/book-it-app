@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Calendar } from "primereact/calendar";
-import { useDatePiker } from "@/components/hooks/useDatePiker";
+import { useDatePiker } from "../../components/hooks/useDatePiker";
 
 export default function DatePicker() {
   const [dates, setDates] = useState(null);

@@ -3,7 +3,7 @@ import { FaUserCircle, FaList } from "react-icons/fa";
 import { MdPlace } from "react-icons/md";
 import PlacesPage from "./PlacesPage";
 import BookingPage from "./BookingPage";
-import { useAuthStore } from "@/components/hooks/useAuthStore";
+import { useAuthStore } from "../components/hooks/useAuthStore";
 
 const AccountPage = () => {
   const { subpage = "profile" } = useParams();

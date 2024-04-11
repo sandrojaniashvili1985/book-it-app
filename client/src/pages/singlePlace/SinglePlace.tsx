@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Image } from "primereact/image";
-import Heading from "@/components/ui/Heading";
+import Heading from "../../components/ui/Heading";
 import DatePicker from "./DatePicker";
 import AddGusts from "./AddGusts";
 import { useNavigate } from "react-router-dom";
@@ -15,8 +15,8 @@ import {
   // FaUtensils,
   FaWifi,
 } from "react-icons/fa";
-import Button from "@/components/ui/Button";
-import useDatePiker from "@/components/hooks/useDatePiker";
+import Button from "../../components/ui/Button";
+import useDatePiker from "../../components/hooks/useDatePiker";
 
 const SinglePlace = () => {
   const { id } = useParams();

@@ -1,10 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useState, useEffect } from "react";
-import PlacesForm from "@/components/places/placesForm";
+import PlacesForm from "../components/places/PhotosForm";
 import axios from "axios";
-import Heading from "@/components/ui/Heading";
-import ItemWithoutThumbnailsDemo from "@/components/ItemThumbnailsDemo";
+import Heading from "../components/ui/Heading";
+import ItemWithoutThumbnailsDemo from "../components/ItemThumbnailsDemo";
 
 const PlacesPage = () => {
   const { action } = useParams();
@@ -22,7 +22,13 @@ const PlacesPage = () => {
   }, []);
 
   if (action === "new") {
-    return <PlacesForm />;
+    return (
+      <PlacesForm
+        register={undefined}
+        addedPhotos={undefined}
+        setAddedPhotos={undefined}
+      />
+    );
   }
 
   return (

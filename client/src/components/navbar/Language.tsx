@@ -1,8 +1,8 @@
 import MenuItem from "./MenuItem";
 import { useTranslation } from "react-i18next";
-import logo from "@/assets/images/logo.png";
-import englishFlag from "@/assets/images/englishFlag.png";
-import hebrewFlag from "@/assets/images/hebrewFlag.png";
+import logo from "../../assets/images/logo.png";
+import englishFlag from "../../assets/images/englishFlag.png";
+import hebrewFlag from "../../assets/images/hebrewFlag.png";
 
 import useLanguageModel from "../hooks/useLanguageModel";
 import useMenuModel from "../hooks/useMenuModel";

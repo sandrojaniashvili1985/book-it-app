@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ItemWithoutThumbnailsDemo from "@/components/ItemThumbnailsDemo";
+import ItemWithoutThumbnailsDemo from "../components/ItemThumbnailsDemo";
 import axios from "axios";
 
 const BookingPage = () => {

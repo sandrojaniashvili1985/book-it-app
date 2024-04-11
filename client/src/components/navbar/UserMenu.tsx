@@ -8,7 +8,7 @@ import useRegisterModel from "../hooks/useRegisterModel";
 import useLoginModel from "../hooks/useLoginModel";
 import useMenuModel from "../hooks/useMenuModel";
 import useLanguageModel from "../hooks/useLanguageModel";
-import { useAuthStore } from "@/components/hooks/useAuthStore";
+import { useAuthStore } from "../hooks/useAuthStore";
 
 function UserMenu() {
   const { t } = useTranslation();

@@ -10,7 +10,7 @@ import Heading from "../ui/Heading";
 import Input from "../ui/Input";
 import useLoginModel from "../hooks/useLoginModel";
 import useRegisterModel from "../hooks/useRegisterModel";
-import { useAuthStore } from "@/components/hooks/useAuthStore";
+import { useAuthStore } from "../hooks/useAuthStore";
 
 function LoginModel() {
   const { t } = useTranslation();

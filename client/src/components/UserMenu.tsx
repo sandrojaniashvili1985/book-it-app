@@ -5,7 +5,7 @@ import { FiAlignJustify } from "react-icons/fi";
 
 import useRegisterModel from "../components/hooks/useRegisterModel";
 import useLoginModel from "../components/hooks/useLoginModel";
-import { useAuthStore } from "@/components/hooks/useAuthStore";
+import { useAuthStore } from "../components/hooks/useAuthStore";
 import { useEffect } from "react";
 import BasicDemo from "./MenuButton";
 import Language from "./Language";

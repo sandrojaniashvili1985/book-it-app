@@ -4,8 +4,8 @@ import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 import Heading from "../ui/Heading";
-import Button from "@/components/ui/Button";
-import Input from "@/components/ui/Input";
+import Button from "../ui/Button";
+import Input from "../ui/Input";
 import toast from "react-hot-toast";
 import Perks from "./Perks";
 import PhotosForm from "./PhotosForm";
