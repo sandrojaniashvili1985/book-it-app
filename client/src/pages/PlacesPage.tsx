@@ -15,7 +15,9 @@ const PlacesPage = () => {
 
     const allPlacesData = async () => {
       // this will be replaced with the actual API endpoint
-      const { data } = await axios.get("/api/hotels/owner/" + user.id);
+      const { data } = await axios.get(
+        "https://book-it-app-six.vercel.app/api/hotels/owner/" + user.id
+      );
       console.log("data", data);
 
       setPlaces(data);
