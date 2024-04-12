@@ -11,24 +11,16 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-// app.use(
-//   cors({
-//     origin: "https://book-it-app-client.vercel.app",
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://book-it-app-client.vercel.app",
+    credentials: true,
+  })
+);
 app.use(cors());
 app.use(morgan("tiny"));
 
 app.use("/api/hotels/uploads", express.static(__dirname + "\\uploads"));
-
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*"); // or specify the allowed origin
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 app.use(router);
 
