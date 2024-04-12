@@ -13,7 +13,9 @@ export default function ItemWithoutThumbnailsDemo({
 
   useEffect(() => {
     const fetchSinglePlace = async () => {
-      const { data } = await axios.get("/api/hotels/" + id);
+      const { data } = await axios.get(
+        "https://book-it-app-six.vercel.app/api/hotels/" + id
+      );
       setImages(
         data.photos.map((photo) => ({
           id: photo,
