@@ -9,7 +9,10 @@ const BookingPage = () => {
   async function fetchBooking() {
     try {
       const response = await axios.get(
-        "https://book-it-app-six.vercel.app/api/booking"
+        "https://book-it-app-six.vercel.app/api/booking",
+        {
+          withCredentials: true,
+        }
       );
       const { data } = await axios.get(
         "https://book-it-app-six.vercel.app/api/hotels/" +
