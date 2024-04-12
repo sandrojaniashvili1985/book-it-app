@@ -37,7 +37,7 @@ function LoginModel() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://book-it-app-six.vercel.app/api/auth/login",
+        "https://book-it-app-six.vercel.app/api/auth/login/",
         data,
         {
           withCredentials: true,
