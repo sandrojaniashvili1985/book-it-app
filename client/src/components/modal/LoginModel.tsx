@@ -40,7 +40,7 @@ function LoginModel() {
         "https://book-it-app-six.vercel.app/api/auth/login/",
         data,
         {
-          withCredentials: true,
+          // withCredentials: true,
         }
       );
       login(res);
