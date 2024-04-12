@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        // target: "https://book-it-app-six.vercel.app",
-        target: "http://localhost:5000",
+        target: "https://book-it-app-six.vercel.app",
+        // target: "http://localhost:5000",
       },
     },
   },
