@@ -23,10 +23,19 @@ app.use(morgan("tiny"));
 app.use("/api/hotels/uploads", express.static(__dirname + "\\uploads"));
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*"); // or specify the allowed origin
+  //Enabling CORS
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+    "Origin",
+    "X-Requested-With",
+    "Content-Type",
+    "Accept",
+    "x-client-key",
+    "x-client-token",
+    "x-client-secret",
+    "Authorization"
   );
   next();
 });
