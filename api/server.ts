@@ -17,7 +17,7 @@ app.use(
     credentials: true,
   })
 );
-// app.use(cors());
+app.use(cors());
 app.use(morgan("tiny"));
 
 app.use("/api/hotels/uploads", express.static(__dirname + "\\uploads"));
