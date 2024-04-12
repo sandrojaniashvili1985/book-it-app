@@ -79,9 +79,9 @@ export async function uploadPhotoByLink(req, res, next) {
   try {
     await download.image({
       url: link,
-      dest: dirname + "\\uploads\\" + link,
+      dest: dirname + "\\uploads\\" + newName,
     });
-    res.status(200).json(link);
+    res.status(200).json(newName);
   } catch (error) {
     next(error);
   }
