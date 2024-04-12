@@ -52,6 +52,7 @@ export const login = async (req, res, next) => {
     if (!validPassword) {
       return res.status(404).json("Wrong email or password");
     }
+
     const token = accessToken(user);
     user.token = { r: token.r, createdAt: token.createdAt };
     req.user = user;

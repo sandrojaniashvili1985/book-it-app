@@ -19,7 +19,15 @@ app.use(
 app.use(morgan("tiny"));
 
 app.use("/api/hotels/uploads", express.static(__dirname + "\\uploads"));
-// app.use("/api/hotels/uploads", express.static(""));
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // or specify the allowed origin
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 app.use(router);
 
@@ -42,7 +50,6 @@ app.use(express.static(path.join(__dirname, "static")));
 app.use("*", express.static(path.join(__dirname, "static/index.html")));
 
 const port = process.env.PORT || 3333;
-// const port = "https://book-it-app-six.vercel.app";
 
 connectDB().catch(() => process.exit(1));
 

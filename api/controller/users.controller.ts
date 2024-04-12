@@ -50,5 +50,3 @@ export async function getUsers(req, res, next) {
     next(error);
   }
 }
-
-// user is owner of the hotel

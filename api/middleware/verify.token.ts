@@ -23,7 +23,6 @@ export function accessToken(user) {
 export function verifyToken(req, res, next) {
   const validDate = Date.now() - 1000 * 60 * 25;
   const token = req.cookies.token;
-
   if (!token) {
     return res.status(401).json("Access denied");
   }

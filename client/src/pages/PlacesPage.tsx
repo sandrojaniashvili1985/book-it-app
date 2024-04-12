@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useState, useEffect } from "react";
-import PlacesForm from "../components/places/PhotosForm";
+import PlacesForm from "../components/places/placesForm";
 import axios from "axios";
 import Heading from "../components/ui/Heading";
 import ItemWithoutThumbnailsDemo from "../components/ItemThumbnailsDemo";
@@ -16,19 +16,15 @@ const PlacesPage = () => {
     const allPlacesData = async () => {
       // this will be replaced with the actual API endpoint
       const { data } = await axios.get("/api/hotels/owner/" + user.id);
+      console.log("data", data);
+
       setPlaces(data);
     };
     allPlacesData();
   }, []);
 
   if (action === "new") {
-    return (
-      <PlacesForm
-        register={undefined}
-        addedPhotos={undefined}
-        setAddedPhotos={undefined}
-      />
-    );
+    return <PlacesForm />;
   }
 
   return (

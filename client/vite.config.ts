@@ -8,9 +8,13 @@ export default defineConfig({
     proxy: {
       "/api": {
         target: "https://book-it-app-six.vercel.app",
-        changeOrigin: true,
-        secure: false,
+        // target: "http://localhost:5000",
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": "/src",
     },
   },
 });

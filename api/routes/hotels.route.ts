@@ -37,6 +37,7 @@ router.get("/owner/:id", verifyToken, verifyHotelOwner, getHotelByOwner);
 router.post("/uploadByLink", uploadPhotoByLink);
 
 const photosMiddleware = multer({ dest: path.join(__dirname, "../uploads") });
+
 router.post(
   "/uploadPhotoByFile",
   photosMiddleware.array("photos", 100),
