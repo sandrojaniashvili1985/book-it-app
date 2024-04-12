@@ -9,9 +9,12 @@ const PhotosForm = ({ register, addedPhotos, setAddedPhotos }) => {
 
   const addPhotoByLink = async (ev) => {
     ev.preventDefault();
-    const dataWithPhoto = await axios.post("/api/hotels/uploadByLink", {
-      link: photoLink,
-    });
+    const dataWithPhoto = await axios.post(
+      "https://book-it-app-six.vercel.app/api/hotels/uploadByLink",
+      {
+        link: photoLink,
+      }
+    );
 
     setAddedPhotos((prev) => {
       return [...prev, dataWithPhoto.data];
@@ -26,11 +29,15 @@ const PhotosForm = ({ register, addedPhotos, setAddedPhotos }) => {
     for (let i = 0; i < file.length; i++) {
       data.append("photos", file[i]);
     }
-    const res = await axios.post("/api/hotels/uploadPhotoByFile", data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    const res = await axios.post(
+      "https://book-it-app-six.vercel.app/api/hotels/uploadPhotoByFile",
+      data,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
 
     setAddedPhotos((prev) => {
       return [...prev, ...res.data];
