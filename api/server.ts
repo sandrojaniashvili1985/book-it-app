@@ -42,8 +42,6 @@ app.use("*", express.static(path.join(__dirname, "static/index.html")));
 
 const port = process.env.PORT || 3333;
 // const port = "https://book-it-app-six.vercel.app";
-// const port = "https://book-it-app-six.vercel.app";
-// const port = "https://book-it-app-six.vercel.app";
 
 connectDB().catch(() => process.exit(1));
 
