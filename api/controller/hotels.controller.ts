@@ -76,7 +76,6 @@ const dirname = path.resolve();
 
 export async function uploadPhotoByLink(req, res, next) {
   const { link } = req.body;
-
   const newName = "photo" + Date.now() + ".jpg";
   try {
     await download.image({
