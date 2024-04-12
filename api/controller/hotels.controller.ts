@@ -3,7 +3,6 @@ import Hotel from "../model/Hotel.model";
 import download from "image-downloader";
 import fs from "fs";
 import jwt from "jsonwebtoken";
-import mongoose from "mongoose";
 
 const SECRET = process.env.JWT_SECRET || "VERY-TOP-SECRET";
 
@@ -80,9 +79,9 @@ export async function uploadPhotoByLink(req, res, next) {
   try {
     await download.image({
       url: link,
-      dest: dirname + "\\uploads\\" + newName,
+      dest: dirname + "\\uploads\\" + link,
     });
-    res.status(200).json(newName);
+    res.status(200).json(link);
   } catch (error) {
     next(error);
   }
