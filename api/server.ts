@@ -19,6 +19,7 @@ app.use(
 app.use(morgan("tiny"));
 
 app.use("/api/hotels/uploads", express.static(__dirname + "\\uploads"));
+// app.use("/api/hotels/uploads", express.static(""));
 
 app.use(router);
 

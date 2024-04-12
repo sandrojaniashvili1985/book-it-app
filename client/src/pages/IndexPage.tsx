@@ -14,7 +14,6 @@ const IndexPage = () => {
     };
     AllHotelsData();
   }, []);
-  console.log(hotels);
 
   return (
     <div className="px-10 py-4">
