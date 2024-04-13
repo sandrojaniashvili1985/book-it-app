@@ -7,6 +7,8 @@ const BookingPage = () => {
   const [singlePlace, setSinglePlace] = useState(null);
 
   async function fetchBooking() {
+    console.log("fetching booking");
+
     try {
       const response = await axios.get("/api/booking");
       const { data } = await axios.get(
