@@ -36,7 +36,9 @@ function LoginModel() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setLoading(true);
     try {
-      const res = await axios.post("/api/auth/login/", data);
+      const res = await axios.post("/api/auth/login/", data, {
+        withCredentials: true,
+      });
       login(res);
       setUser(res.data);
       toast.success(`welcome ${res.data?.username}`);
