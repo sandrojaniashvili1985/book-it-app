@@ -8,12 +8,9 @@ const BookingPage = () => {
 
   async function fetchBooking() {
     try {
-      const response = await axios.get(
-        "https://book-it-app-six.vercel.app/api/booking"
-      );
+      const response = await axios.get("/api/booking");
       const { data } = await axios.get(
-        "https://book-it-app-six.vercel.app/api/hotels/" +
-          response?.data[0]?.hotel
+        "/api/hotels/" + response?.data[0]?.hotel
       );
       setBooking(response.data);
       if (data) {

@@ -36,13 +36,7 @@ function LoginModel() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setLoading(true);
     try {
-      const res = await axios.post(
-        "https://book-it-app-six.vercel.app/api/auth/login/",
-        data,
-        {
-          withCredentials: true,
-        }
-      );
+      const res = await axios.post("/api/auth/login/", data);
       login(res);
       setUser(res.data);
       toast.success(`welcome ${res.data?.username}`);

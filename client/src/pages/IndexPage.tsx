@@ -9,9 +9,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     const AllHotelsData = async () => {
-      const { data } = await axios.get(
-        "https://book-it-app-six.vercel.app/api/hotels/"
-      );
+      const { data } = await axios.get("/api/hotels/");
       setHotels(data);
     };
     AllHotelsData();

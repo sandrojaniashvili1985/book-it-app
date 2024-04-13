@@ -36,10 +36,7 @@ function RegisterModel() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setLoading(true);
     try {
-      const res = await axios.post(
-        "https://book-it-app-six.vercel.app/api/auth/register",
-        data
-      );
+      const res = await axios.post("/api/auth/register", data);
       toast.success(res.data.massage);
       loginModel.onClose();
       navigate("/");
