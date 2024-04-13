@@ -10,7 +10,7 @@ const routes = createBrowserRouter(route);
 
 axios.defaults.baseURL = "https://book-it-app-six.vercel.app";
 // axios.defaults.baseURL = "http://localhost:5000";
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
