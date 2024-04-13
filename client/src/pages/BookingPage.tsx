@@ -14,8 +14,6 @@ const BookingPage = () => {
       const { data } = await axios.get(
         "/api/hotels/" + response?.data[0]?.hotel
       );
-      console.log("data", data);
-      console.log("response", response);
 
       setBooking(response.data);
       if (data) {
@@ -25,7 +23,6 @@ const BookingPage = () => {
       console.error(error);
     }
   }
-  console.log("booking", booking);
 
   useEffect(() => {
     fetchBooking();
